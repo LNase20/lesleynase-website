@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Lesley Nase</title>
+  <meta name="description" content="Get in touch with Lesley Nase to book a consultation or ask a question." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="brand">
+        <span class="brand-name">Lesley Nase</span>
+        <span class="brand-tagline">[Your Tagline Here]</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-primary nav-cta">Book a Consultation</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Contact</span>
+          <h1>Let's get in touch</h1>
+          <p>Fill out the form below to ask a question or book a consultation — I'll get back to you within 1-2 business days.</p>
+        </div>
+
+        <div class="contact-layout">
+          <aside class="contact-info-card">
+            <h3>Contact details</h3>
+            <div class="contact-info-list">
+              <div class="contact-info-item">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" opacity="0"></path><path d="M3 6l9 7 9-7"></path><rect x="3" y="4" width="18" height="16" rx="2"></rect></svg>
+                <span>hello@lesleynase.com</span>
+              </div>
+              <div class="contact-info-item">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.34 1.79.65 2.65a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.43-1.22a2 2 0 0 1 2.11-.45c.86.31 1.75.53 2.65.65A2 2 0 0 1 22 16.92z"></path></svg>
+                <span>(000) 000-0000</span>
+              </div>
+              <div class="contact-info-item">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>Your City, State</span>
+              </div>
+              <div class="contact-info-item">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>
+                <span>Mon&ndash;Fri, 9am&ndash;5pm</span>
+              </div>
+            </div>
+          </aside>
+
+          <div class="form-card">
+            <div id="form-success" class="form-notice form-notice--success"></div>
+            <div id="form-error" class="form-notice form-notice--error"></div>
+
+            <form id="contact-form" action="contact-handler.php" method="POST" novalidate>
+              <div class="form-row form-row--2">
+                <div class="field">
+                  <label for="name">Full Name</label>
+                  <input type="text" id="name" name="name" required />
+                  <p class="field-error"></p>
+                </div>
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required />
+                  <p class="field-error"></p>
+                </div>
+              </div>
+
+              <div class="form-row form-row--2">
+                <div class="field">
+                  <label for="phone">Phone <span style="font-weight:400;color:var(--color-text-muted);">(optional)</span></label>
+                  <input type="tel" id="phone" name="phone" />
+                  <p class="field-error"></p>
+                </div>
+                <div class="field">
+                  <label for="service">Service Interested In</label>
+                  <select id="service" name="service" required>
+                    <option value="">Select a service&hellip;</option>
+                    <option value="Service One">Service One</option>
+                    <option value="Service Two">Service Two</option>
+                    <option value="Service Three">Service Three</option>
+                    <option value="Not sure yet">Not sure yet</option>
+                  </select>
+                  <p class="field-error"></p>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="field">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" required placeholder="Tell me a bit about what you're looking for..."></textarea>
+                  <p class="field-error"></p>
+                </div>
+              </div>
+
+              <!-- Honeypot field: hidden from real visitors, catches bots -->
+              <div class="field hp-field" aria-hidden="true">
+                <label for="website">Website</label>
+                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand-name">Lesley Nase</span>
+          <p>Replace with a one or two sentence description of your business, reused from the hero section.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:hello@lesleynase.com">hello@lesleynase.com</a></li>
+            <li><a href="tel:+10000000000">(000) 000-0000</a></li>
+            <li>Your City, State</li>
+          </ul>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram" title="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn" title="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="8" y1="11" x2="8" y2="16"></line><line x1="8" y1="8" x2="8" y2="8"></line><line x1="12" y1="11" x2="12" y2="16"></line><path d="M12 13c0-1.5 1-2 2-2s2 .5 2 2v3"></path></svg>
+            </a>
+            <a href="#" aria-label="Facebook" title="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h-2a4 4 0 0 0-4 4v3H7v4h2v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year"></span> Lesley Nase. All rights reserved.</span>
+        <span>Site built with care.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
