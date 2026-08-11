@@ -262,7 +262,7 @@ p {
   overflow: hidden;
   min-height: 620px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   background-color: var(--color-primary-dark);
   background-image: url("../images/hero-banner.png");
   background-size: cover;
@@ -275,10 +275,10 @@ p {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    100deg,
-    rgba(var(--color-primary-dark-rgb), 0.88) 0%,
-    rgba(var(--color-primary-dark-rgb), 0.6) 40%,
-    rgba(var(--color-primary-dark-rgb), 0.2) 75%
+    to left,
+    rgba(var(--color-primary-dark-rgb), 0.85) 0%,
+    rgba(var(--color-primary-dark-rgb), 0.5) 32%,
+    rgba(var(--color-primary-dark-rgb), 0.1) 62%
   );
 }
 
@@ -286,16 +286,19 @@ p {
   position: relative;
   z-index: 1;
   width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: var(--space-6);
 }
 
 .hero-copy {
-  max-width: 440px;
-  margin-left: clamp(1rem, 7vw, 7rem);
+  max-width: 320px;
+  text-align: right;
 }
 
 .hero-copy h1 {
   font-family: "Playfair Display", var(--font-serif);
-  font-size: clamp(2.25rem, 2.8vw + 1rem, 3.5rem);
+  font-size: clamp(1.75rem, 1.8vw + 1rem, 2.5rem);
   color: #f3e8d6;
   margin-bottom: var(--space-2);
 }
@@ -306,7 +309,7 @@ p {
   font-style: italic;
   font-weight: 500;
   letter-spacing: 0.01em;
-  font-size: clamp(1.1rem, 1.4vw + 0.5rem, 1.5rem);
+  font-size: clamp(1rem, 1vw + 0.5rem, 1.25rem);
   color: var(--color-text-inverse);
 }
 
@@ -718,6 +721,17 @@ p {
     padding: var(--space-6) 0;
     background-size: contain;
     background-position: top center;
+    align-items: center;
+  }
+
+  .hero .container {
+    justify-content: flex-start;
+    padding-top: 0;
+  }
+
+  .hero-copy {
+    max-width: 100%;
+    text-align: left;
   }
 
   .hero::before {
