@@ -11,11 +11,9 @@ A plain HTML/CSS/JS business site — no build step required, so it deploys as-i
 
 ## Customizing content
 
-Everything in brackets like `[Your Tagline Here]` or `$XXX` is placeholder — search each HTML file for these and replace with real copy, pricing, and contact info. Also update:
+All page copy, the homepage logo, and the About page headshot have been replaced with real content. One item is still outstanding:
 
-- `hello@lesleynase.com` and `(000) 000-0000` (appears in header CTA, contact page, and footer of every page)
-- `TO_EMAIL` at the top of `contact-handler.php` — this is where form submissions actually get sent
-- The "LN" placeholder mark in the hero and the `photo-placeholder` block on `about.html` — swap for a real logo/photo when you have one
+- `hello@lesleynase.com` needs to actually be created as a mailbox in Hostinger (hPanel → Emails) — until then, form submissions sent via `contact-handler.php`'s `TO_EMAIL` won't be delivered anywhere.
 
 ## Deploying to Hostinger via Git
 
