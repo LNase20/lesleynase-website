@@ -394,6 +394,41 @@ p {
   max-width: 50ch;
 }
 
+/* Meet Lesley */
+.meet-lesley {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+}
+
+.meet-lesley-photo {
+  width: 220px;
+  flex-shrink: 0;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.meet-lesley h2 {
+  margin-bottom: var(--space-2);
+}
+
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  color: var(--color-text);
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.link-arrow:hover {
+  color: var(--color-accent-dark);
+  border-color: var(--color-accent);
+}
+
 /* Testimonial */
 .testimonial {
   max-width: 720px;
@@ -710,7 +745,8 @@ p {
     grid-template-columns: 1fr;
   }
 
-  .about-hero {
+  .about-hero,
+  .meet-lesley {
     flex-direction: column;
     align-items: center;
     text-align: center;
