@@ -117,6 +117,10 @@ p {
   background: var(--color-surface);
 }
 
+.section--gold {
+  background: rgba(212, 175, 55, 0.1);
+}
+
 .section-head {
   max-width: 640px;
   margin: 0 auto var(--space-5);
