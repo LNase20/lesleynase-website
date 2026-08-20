@@ -176,9 +176,9 @@ p {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255, 255, 255, 0.92);
+  background: var(--color-primary);
   backdrop-filter: saturate(180%) blur(10px);
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid rgba(244, 245, 247, 0.12);
 }
 
 .nav {
@@ -200,14 +200,14 @@ p {
   font-family: var(--font-serif);
   font-size: 1.35rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: #f3e8d6;
 }
 
 .brand-tagline {
   font-size: 0.7rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-accent-dark);
+  color: var(--color-text-inverse);
 }
 
 .nav-links {
@@ -219,7 +219,7 @@ p {
 .nav-links a {
   font-weight: 600;
   font-size: 0.95rem;
-  color: var(--color-text);
+  color: var(--color-text-inverse);
   padding: 0.25rem 0;
   border-bottom: 2px solid transparent;
   transition: color 0.15s ease, border-color 0.15s ease;
@@ -248,7 +248,7 @@ p {
 .nav-toggle span {
   width: 24px;
   height: 2px;
-  background: var(--color-primary);
+  background: var(--color-text-inverse);
   border-radius: 2px;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
@@ -762,12 +762,12 @@ p {
     top: 100%;
     left: 0;
     right: 0;
-    background: #fff;
+    background: var(--color-primary);
     flex-direction: column;
     align-items: flex-start;
     gap: var(--space-2);
     padding: var(--space-3);
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid rgba(244, 245, 247, 0.12);
     box-shadow: var(--shadow-md);
     display: none;
   }
