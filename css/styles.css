@@ -365,6 +365,11 @@ p {
   font-size: 0.95rem;
 }
 
+.card .link-arrow {
+  margin-top: var(--space-2);
+  font-size: 0.9rem;
+}
+
 .card-price {
   margin-top: var(--space-2);
   font-family: var(--font-serif);
@@ -402,7 +407,8 @@ p {
 }
 
 .meet-lesley-photo {
-  width: 220px;
+  width: 320px;
+  max-width: 320px;
   flex-shrink: 0;
   aspect-ratio: 4 / 5;
   object-fit: cover;
